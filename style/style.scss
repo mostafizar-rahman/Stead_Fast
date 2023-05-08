@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+// ------------------------------------ Scss Varibale
+$__black_one: #000000f1;
+$__black_two: #232323db;
+$__green_one: #1dc68c;
+$__white_one: #fff;
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin big_btn {
+  max-width: 220px;
+  width: 100%;
+  height: 50px;
+  background-color: $__white_one;
+  border-radius: 7px;
+  @include flex_center();
+  font-weight: 600;
+  color: $__green_one;
+  padding: 0 10px;
+}
+
+@mixin small_btn {
+  @include big_btn();
+  height: 35px;
+  width: 100px;
+  color: $__white_one;
+  background-color: $__green_one;
+}
+
+@mixin input_filed {
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid $__green_one;
+  height: 45px;
+  outline: none;
+  &:focus {
+    border: 2px solid $__green_one;
+  }
+}
+// ------------------------------------- Common Style
+.container {
+  max-width: 1200px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $__black_one;
+  font-size: 15px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+p {
+  font-size: 17px;
+}
+
+.mt_120 {
+  margin-top: 120px;
+}
+.mb_120 {
+  margin-bottom: 120px;
+}
+// ----------------------------------------Header
+.header {
+  a {
+    font-weight: 500;
+    color: $__black_two;
+    transition: all 0.5s;
+    &:hover {
+      color: $__green_one;
+    }
+  }
+  .register {
+    @include small_btn();
+    background-color: transparent;
+    color: $__black_two;
+    border: 1px solid $__black_two;
+  }
+  .login {
+    @include small_btn();
+  }
+}
+
+
+
+// ----------------------------------------Banner
+.main__banner {
+  background-image: url("../assets/images/bg-wave-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &_info {
+    a {
+      @include big_btn();
+      margin-top: 50px;
+    }
+  }
+
+  &_inputBox {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    input {
+      @include input_filed;
+    }
+    button {
+      @include big_btn();
+      background-color: $__green_one;
+      border: none;
+      color: $__white_one;
+      height: 45px;
+      border-radius: 0;
+    }
+  }
+}
+
+.contact__banner{
+    background-image: url(../assets/images/bg-down-curve.svg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
+
+
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+
+// ------------------------------------------- Our Services
+.our_services {
+  .service_item {
+    p {
+      font-weight: 500;
+    }
+    .service_img {
+      width: 150px;
+      height: 150px;
+      border-radius: 35px;
+      transform: rotate(45deg);
+      @include flex_center();
+      img {
+        transform: rotate(-45deg);
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+
+// ---------------------------------------------- service_area
+.service_area{
+    a{
+        font-weight: 600;
+        color: $__green_one;
+    }
+}
+
+
+// --------------------------------------------- Charge  Calculator
+.calculator{
+    label{
+        font-weight: 500;
+        display: block;
+    }
+    select, input{
+        padding:7px 10px;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 7px;
+    }
+    input{
+        border: 1px solid $__black_two;
+    }
+}
+
+// --------------------------------------------- footer
+.footer{
+    background-image: url(../assets/images/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+    h5{
+        color: $__white_one;
+        font-weight: 600;
+    }
+    a{
+        color: $__white_one;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    .newsletter{
+        position: relative;
+        input{
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            padding: 10px;
+            border: 2px solid $__white_one;
+            color: $__white_one;
+            border-radius: 5px;
+            &::placeholder{
+                color: $__white_one;
+            }
+            &:focus{
+                outline: 1px solid $__white_one;
+            }
+        }
+        button{
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 40px;
+            border: none;
+            padding: 0 15px;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+@media(max-width: 972px){
+    .mobile_menu{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: $__white_one;
+        min-height: 100vh;
+        padding: 10px;
+        min-width: 50%;
+    }
+}
+
+@media (max-width:576px) {
+    h1{
+        font-size: 25px;
+        font-weight: 500;
+    }
+}
