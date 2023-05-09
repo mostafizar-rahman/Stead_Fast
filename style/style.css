@@ -44,6 +44,10 @@ p {
   font-size: 17px;
 }
 
+span {
+  font-size: 14px;
+}
+
 .mt_120 {
   margin-top: 120px;
 }
@@ -96,6 +100,9 @@ p {
   width: 100px;
   color: #fff;
   background-color: #1dc68c;
+}
+.header .mobile_menu {
+  transition: all 0.5s;
 }
 
 .main__banner {
@@ -301,12 +308,16 @@ p {
   }
   .mobile_menu {
     position: absolute;
-    left: 0;
+    left: -100%;
     top: 100%;
     background-color: #fff;
     min-height: 100vh;
     padding: 10px;
     min-width: 50%;
+    line-height: 40px;
+  }
+  .active {
+    left: 0;
   }
 }
 @media (max-width: 768px) {
