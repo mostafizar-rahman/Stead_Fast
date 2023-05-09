@@ -262,6 +262,10 @@ span {
   padding: 0 15px;
   border-radius: 5px;
 }
+.footer__bottom img {
+  width: 40px;
+  margin: 0 7px;
+}
 
 .contact__form input,
 .contact__form textarea {
