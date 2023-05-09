@@ -27,46 +27,57 @@
             <li><a href="" class="login">Login</a></li>
           </ul>
 
-          <ul class="d-lg-none d-block align-items-center gap-5 mobile_menu">
+          <ul class="d-lg-none d-none lh-lg mobile_menu">
             <li><a href="">Service</a></li>
             <li><a href="">Service area</a></li>
             <li><a href="">Pricing</a></li>
             <li><a href="">Contact Us</a></li>
-            <li><a href="" class="register">Register</a></li>
-            <li><a href="" class="login">Login</a></li>
           </ul>
         </nav>
+        <div class="d-flex gap-4 d-lg-none">
+          <a href="" class="login">Login</a>
+          <div class="menu_icon">
+            <img src="./assets/icons/menu.png" alt="" />
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- ---------------------- Main Baner ------------------- -->
     <section class="main__banner mb_120 position-relative">
-      <div class="container">
-        <div class="d-flex">
-          <div class="main__banner_info">
-            <h1 class="text-white">Parcel Delivered On Time with no Hassle</h1>
-            <p class="text-white">
-              Easily track your courier, Get courier within hours. Efficient &
-              safe delivery.
-            </p>
-            <a href="">BECOME A MERCHANT</a>
+      <div class="container position-relative">
+        <div class="d-flex justify-content-between ">
+          <div class="">
+            <div class="main__banner_info">
+              <h2 class="text-white">
+                Parcel Delivered <br />
+                On Time with no Hassle
+              </h2>
+              <p class="text-white d-none d-md-block">
+                Easily track your courier, Get courier within hours. Efficient &
+                safe delivery.
+              </p>
+              <a href="">BECOME A MERCHANT</a>
+            </div>
           </div>
-
-          <div>
+          <div class="main__banner_img">
             <img src="./assets/images/dlv-man.png" alt="" class="img-fluid" />
+            <div class=""></div>
           </div>
         </div>
-        <div
-          class="main__banner_inputBox shadow-lg bg-white px-5 py-4 rounded-3"
-        >
-          <div class="d-flex gap-2">
-            <h6 class="fw-bold">TRACK YOUR CONSIGNMENT</h6>
-            <span>Now you can easily track your consignment</span>
-          </div>
-          <div class="d-flex gap-3 mt-2">
-            <input type="text" placeholder="Enter your tracking code" />
-            <button>Search</button>
-          </div>
+      </div>
+      <div class="main__banner_inputBox shadow-lg bg-white px-md-5 px-3 px-md-2 py-4 rounded-3">
+        <div class="d-flex gap-2">
+          <h6 class="fw-bold">TRACK YOUR CONSIGNMENT</h6>
+          <span class="d-none d-lg-block"
+            >Now you can easily track your consignment</span
+          >
+        </div>
+        <div class="d-flex gap-3 mt-2">
+          <input type="text" placeholder="Enter your tracking code" />
+          <button>
+            <img src="./assets/icons/search.png" alt="">
+          </button>
         </div>
       </div>
     </section>
@@ -139,36 +150,36 @@
       <div class="container">
         <h3 class="text-center mb-5">Our Services</h3>
         <div class="row mt-5">
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-6 mb-4 mb-sm-0">
             <div class="service_item text-center">
               <div class="service_img shadow-lg mx-auto">
                 <img src="./assets/icons/courier.png" alt="" />
               </div>
-              <p class="mt-5">E-commerce Delivery</p>
+              <p class="mt-sm-5 mt-3">E-commerce Delivery</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-6 mb-4 mb-sm-0">
             <div class="service_item text-center">
               <div class="service_img shadow-lg mx-auto">
                 <img src="./assets/icons/pick.png" alt="" />
               </div>
-              <p class="mt-5">Pick nad Drop</p>
+              <p class="mt-sm-5 mt-3">Pick nad Drop</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-6 mb-4 mb-sm-0">
             <div class="service_item text-center">
               <div class="service_img shadow-lg mx-auto">
                 <img src="./assets/icons/warehouse.png" alt="" />
               </div>
-              <p class="mt-5">Warehousing</p>
+              <p class="mt-sm-5 mt-3">Warehousing</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-6 mb-4 mb-sm-0">
             <div class="service_item text-center">
               <div class="service_img shadow-lg mx-auto">
                 <img src="./assets/icons/box.png" alt="" />
               </div>
-              <p class="mt-5">Packaging</p>
+              <p class="mt-sm-5 mt-3">Packaging</p>
             </div>
           </div>
         </div>
@@ -189,8 +200,8 @@
     <section class="calculator mb_120">
       <div class="container">
         <h3 class="text-center">Calculate Charge</h3>
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row ">
+          <div class="col-md-3 col-6 mt-3">
             <label for="from">From</label>
             <select name="from" id="from">
               <option value="">Dhaka City</option>
@@ -198,7 +209,7 @@
               <option value="">Feni City</option>
             </select>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-6 mt-3">
             <label for="destination">Destination</label>
             <select name="destination" id="destination">
               <option value="">Dhaka City</option>
@@ -206,7 +217,7 @@
               <option value="">Feni City</option>
             </select>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-6 mt-3">
             <label for="category">Category</label>
             <select name="category" id="category">
               <option value="">Regular</option>
@@ -214,14 +225,14 @@
               <option value="">Book</option>
             </select>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-6 mt-3">
             <label for="service">Service</label>
             <select name="service" id="service">
               <option value="">Regular</option>
               <option value="">Same Day</option>
             </select>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 mt-3">
             <label for="weight">Weight (KG)</label>
             <input type="number" value="015" name="weight" />
           </div>
@@ -232,8 +243,8 @@
     <!-- ------------------------- Footer ------------------------- -->
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="row pt-5">
+          <div class="col-lg-3 col-sm-4 mb-5">
             <h5>SERVICES</h5>
             <ul>
               <li>
@@ -247,7 +258,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-sm-4 mb-5">
             <h5>EARN</h5>
             <ul>
               <li>
@@ -261,7 +272,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-6 col-sm-12">
+          <div class="col-lg-2 col-sm-4 mb-5">
             <h5>COMPANY</h5>
             <ul>
               <li>
@@ -286,7 +297,7 @@
             </div>
           </div>
         </div>
-        <div class="border-bottom border-2 py-5"></div>
+        <div class="border-bottom border-2 py-3"></div>
       </div>
     </footer>
 

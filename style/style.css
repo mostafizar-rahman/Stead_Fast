@@ -7,10 +7,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #ddd;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1150px;
 }
 
 ul {
@@ -25,11 +26,6 @@ a {
   font-size: 15px;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 50px;
-}
-
 h2 {
   font-weight: 700;
   font-size: 40px;
@@ -38,6 +34,10 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 30px;
+}
+
+h4 {
+  font-weight: 600;
 }
 
 p {
@@ -102,9 +102,8 @@ p {
   background-image: url("../assets/images/bg-wave-img.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 210px;
 }
 .main__banner_info a {
   max-width: 220px;
@@ -154,10 +153,12 @@ p {
   height: 45px;
   border-radius: 0;
 }
+.main__banner_inputBox button img {
+  width: 20px;
+}
 
 .contact__banner {
   background-image: url(../assets/images/bg-down-curve.svg);
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -192,11 +193,17 @@ p {
   font-weight: 500;
   display: block;
 }
-.calculator select, .calculator input {
+.calculator select,
+.calculator input {
   padding: 7px 10px;
   border-radius: 5px;
   width: 100%;
   margin-top: 7px;
+  background-color: #ddd;
+}
+.calculator select:focus,
+.calculator input:focus {
+  border: 1px solid #1dc68c;
 }
 .calculator input {
   border: 1px solid rgba(35, 35, 35, 0.8588235294);
@@ -249,7 +256,49 @@ p {
   border-radius: 5px;
 }
 
+.contact__form input,
+.contact__form textarea {
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #1dc68c;
+  height: 45px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  margin: 10px 0;
+}
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border: 2px solid #1dc68c;
+}
+.contact__form textarea {
+  min-height: 150px;
+}
+.contact__form button {
+  background-color: #1dc68c;
+  border: none;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+.contact__form .contact__info h4 {
+  background-color: #1dc68c;
+  display: inline-block;
+  padding: 2px 15px;
+  border-radius: 50px;
+  color: #fff;
+}
+.contact__form .contact__info img {
+  width: 20px;
+}
+
 @media (max-width: 972px) {
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
   .mobile_menu {
     position: absolute;
     left: 0;
@@ -260,9 +309,53 @@ p {
     min-width: 50%;
   }
 }
+@media (max-width: 768px) {
+  .main__banner_inputBox {
+    width: 90%;
+  }
+  .main__banner_info a {
+    font-weight: 400;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .main__banner_img {
+    width: 70%;
+  }
+}
 @media (max-width: 576px) {
-  h1 {
-    font-size: 25px;
-    font-weight: 500;
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .main__banner_inputBox button {
+    max-width: 220px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #1dc68c;
+    padding: 0 10px;
+    background-color: #1dc68c;
+    border: none;
+    color: #fff;
+    height: 45px;
+    border-radius: 0;
+    width: 150px;
+  }
+  .main__banner_inputBox button img {
+    width: 20px;
+  }
+  .our_services .service_item .service_img {
+    width: 100px;
+    height: 100px;
+  }
+  .our_services .service_item .service_img img {
+    transform: rotate(-45deg);
+    width: 50px;
+    height: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
